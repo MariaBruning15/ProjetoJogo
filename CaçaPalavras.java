@@ -8,6 +8,7 @@ public class CaçaPalavras {
         GerarPalavras palavras = new GerarPalavras();
         CaçaPalavrasMetodos metodos = new CaçaPalavrasMetodos();
         Entrada entrada = new Entrada();
+        Dica dica = new Dica();
 
         int tamanho = 10;
         char tabuleiro[][] = new char[tamanho][tamanho];
@@ -16,16 +17,9 @@ public class CaçaPalavras {
 
         metodos.preencherTabuleiro(tabuleiro, tamanho);
         metodos.imprimirTabuleiro(tabuleiro, tamanho);
+        metodos.tabuleiro(tamanho, palavraSelecionada, tabuleiro);
 
-        int linha = random.nextInt(tamanho);
-        int coluna = random.nextInt(tamanho - palavraSelecionada.length());
-
-        for (int x = 0; x<palavraSelecionada.length(); x++) {
-            tabuleiro[linha][coluna+x] = palavraSelecionada.charAt(x);
-        }
-        metodos.imprimirTabuleiro(tabuleiro, tamanho);
-
-        entrada.entrada(palavraSelecionada);
+        entrada.Entrada(palavraSelecionada, dica);
 
 
         

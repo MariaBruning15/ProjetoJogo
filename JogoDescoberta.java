@@ -10,13 +10,15 @@ public class JogoDescoberta {
         String palavraSelecionada = palavras.palavras[random.nextInt(palavras.palavras.length)];
         Embaralhar embaralhar = new Embaralhar();
         Entrada entrada = new Entrada();
+        Dica dica = new Dica();
+
 
         String palavraEmbaralhada = embaralhar.embaralhar(palavraSelecionada);
 
         System.out.println("Qual a palavra " + palavraEmbaralhada + "?");
         
 
-        entrada.entrada(palavraSelecionada);
+        entrada.Entrada(palavraSelecionada, dica);
 
         Scanner scanner = new Scanner(System.in);
 
