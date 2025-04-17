@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class CaçaPalavras {
-    public static void main(String[] args) {
+    public void CaçaPalavras() {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         GerarPalavras palavras = new GerarPalavras();
