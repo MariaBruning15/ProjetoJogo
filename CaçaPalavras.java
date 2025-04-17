@@ -9,6 +9,7 @@ public class CaçaPalavras {
         CaçaPalavrasMetodos metodos = new CaçaPalavrasMetodos();
         Entrada entrada = new Entrada();
         Dica dica = new Dica();
+        Desistir desistir = new Desistir();
 
         int tamanho = 10;
         char tabuleiro[][] = new char[tamanho][tamanho];
@@ -19,7 +20,7 @@ public class CaçaPalavras {
         metodos.imprimirTabuleiro(tabuleiro, tamanho);
         metodos.tabuleiro(tamanho, palavraSelecionada, tabuleiro);
 
-        entrada.Entrada(palavraSelecionada, dica);
+        entrada.Entrada(palavraSelecionada, dica, desistir);
 
 
         

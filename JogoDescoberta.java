@@ -11,6 +11,7 @@ public class JogoDescoberta {
         Embaralhar embaralhar = new Embaralhar();
         Entrada entrada = new Entrada();
         Dica dica = new Dica();
+        Desistir desistir = new Desistir();
 
 
         String palavraEmbaralhada = embaralhar.embaralhar(palavraSelecionada);
@@ -18,7 +19,7 @@ public class JogoDescoberta {
         System.out.println("Qual a palavra " + palavraEmbaralhada + "?");
         
 
-        entrada.Entrada(palavraSelecionada, dica);
+        entrada.Entrada(palavraSelecionada, dica, desistir);
 
         Scanner scanner = new Scanner(System.in);
 
