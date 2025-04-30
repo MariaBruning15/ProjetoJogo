@@ -23,7 +23,17 @@ public class Entrada{
                 if(entrada.equals(palavraSelecionada)){
                     System.out.println("Você acertou com " + tentativas + " tentativas");
                     acertou = true;
-                    break;
+                    int continuar;
+                    System.out.println("Deseja jogar novamente? \n Digite '1' para sim e '2' para não");
+                    continuar = scanner.nextInt();
+                    if(continuar == 1){
+                        Menu menu = new Menu();
+                        menu.Menu();
+                    }
+                    else if(continuar == 2){
+                        System.out.println("Fim de jogo");
+                        break;
+                    }
                 }
 
                 else{
