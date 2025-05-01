@@ -16,6 +16,10 @@ public class Menu {
             jogodescoberta.JogoDescoberta();
             
         }
+        else{
+            System.out.println("Digite um valor válido");
+            Menu();
+        }
 
 
     }

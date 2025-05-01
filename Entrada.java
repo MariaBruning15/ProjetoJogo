@@ -4,6 +4,7 @@ public class Entrada{
 
     void Entrada(String palavraSelecionada, Dica dica, Desistir desistir){
         Scanner scanner = new Scanner(System.in);
+        Menu menu = new Menu();
         int tentativas = 1;
         Boolean acertou = false;
 
@@ -23,16 +24,19 @@ public class Entrada{
                 if(entrada.equals(palavraSelecionada)){
                     System.out.println("Você acertou com " + tentativas + " tentativas");
                     acertou = true;
-                    int continuar;
-                    System.out.println("Deseja jogar novamente? \n Digite '1' para sim e '2' para não");
-                    continuar = scanner.nextInt();
+                    int continuar = 0;
+                    Continuar(continuar, scanner);
+
                     if(continuar == 1){
-                        Menu menu = new Menu();
                         menu.Menu();
                     }
                     else if(continuar == 2){
                         System.out.println("Fim de jogo");
                         break;
+                    }
+                    else{
+                        System.out.println("Digite um valor válido");
+                        Continuar(continuar, scanner);
                     }
                 }
 
@@ -40,5 +44,12 @@ public class Entrada{
                     tentativas++;
                 }
             }
+        }
+
+        public int Continuar(int continuar, Scanner scanner){
+            System.out.println("Deseja jogar novamente? \n Digite '1' para sim e '2' para não");
+            continuar = scanner.nextInt();
+            return continuar;
+            
         }
     }
