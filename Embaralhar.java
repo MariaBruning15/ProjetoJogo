@@ -1,9 +1,10 @@
 import java.util.Random;
 
 public class Embaralhar {
-    public static String embaralhar(String palavra){
+    private Random random = new Random();
+
+    public static String embaralhar(String palavra, Random random){
             char[] palavraArray = palavra.toCharArray();
-            Random random = new Random();
             for(int x=0; x<palavraArray.length; x++){
                 int indiceAleatorio = random.nextInt(palavraArray.length);
                 char temp = palavraArray[x];

@@ -2,8 +2,9 @@ import java.util.Scanner;
 
 public class Menu {
     public static void menu(){
-        Scanner scanner = new Scanner(System.in);
         int entrada;
+        Scanner scanner = new Scanner(System.in);
+        
         System.out.println("Qual jogo deseja jogar? \n Digite '1' para jogar CaçaPalvras \n Digite '2' para jogar Jogo da Descoberta");
         entrada = scanner.nextInt();
 

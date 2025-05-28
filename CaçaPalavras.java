@@ -2,6 +2,9 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class CaçaPalavras {
+    private int tamanho = 10;
+    private char tabuleiro[][] = new char[tamanho][tamanho];
+
     public void caçaPalavras() {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
@@ -11,10 +14,7 @@ public class CaçaPalavras {
         Dica dica = new Dica();
         Desistir desistir = new Desistir();
 
-        int tamanho = 10;
-        char tabuleiro[][] = new char[tamanho][tamanho];
-
-        String palavraSelecionada = palavras.palavras[random.nextInt(palavras.palavras.length)];
+        String palavraSelecionada = palavras.getPalavras()[random.nextInt(palavras.getPalavras().length)];
 
         metodos.preencherTabuleiro(tabuleiro, tamanho);
         metodos.imprimirTabuleiro(tabuleiro, tamanho);
