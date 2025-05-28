@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class CaçaPalavras {
-    public void CaçaPalavras() {
+    public void caçaPalavras() {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         GerarPalavras palavras = new GerarPalavras();
@@ -18,9 +18,8 @@ public class CaçaPalavras {
 
         metodos.preencherTabuleiro(tabuleiro, tamanho);
         metodos.imprimirTabuleiro(tabuleiro, tamanho);
-        metodos.tabuleiro(tamanho, palavraSelecionada, tabuleiro);
 
-        entrada.Entrada(palavraSelecionada, dica, desistir);
+        entrada.entrada(palavraSelecionada, dica, desistir);
 
 
         

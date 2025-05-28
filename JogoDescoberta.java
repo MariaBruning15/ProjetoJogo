@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class JogoDescoberta {
-    public void JogoDescoberta() {
+    public void jogoDescoberta() {
         System.out.println("Bem-vindo ao Jogo da Descobeta");
 
         GerarPalavras palavras = new GerarPalavras();
@@ -19,7 +19,7 @@ public class JogoDescoberta {
         System.out.println("Qual a palavra " + palavraEmbaralhada + "?");
         
 
-        entrada.Entrada(palavraSelecionada, dica, desistir);
+        entrada.entrada(palavraSelecionada, dica, desistir);
 
         Scanner scanner = new Scanner(System.in);
 

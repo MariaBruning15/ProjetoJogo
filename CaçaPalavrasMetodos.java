@@ -25,14 +25,5 @@ public class CaçaPalavrasMetodos {
         return matrizTabuleiroPreencher;
     }
 
-    public static void tabuleiro(int tamanho, String palavraSelecionada, char tabuleiro[][]){
-        
-        Random random = new Random();
-        int linha = random.nextInt(tamanho);
-        int coluna = random.nextInt(tamanho - palavraSelecionada.length());
-
-        for (int x = 0; x<palavraSelecionada.length(); x++) {
-            tabuleiro[linha][coluna+x] = palavraSelecionada.charAt(x);
-        }
-    }
+   
 }

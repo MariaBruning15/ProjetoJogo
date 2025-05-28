@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Menu {
-    public static void Menu(){
+    public static void menu(){
         Scanner scanner = new Scanner(System.in);
         int entrada;
         System.out.println("Qual jogo deseja jogar? \n Digite '1' para jogar CaçaPalvras \n Digite '2' para jogar Jogo da Descoberta");
@@ -9,17 +9,14 @@ public class Menu {
 
         if(entrada == 1){
             CaçaPalavras caçaPalavras = new CaçaPalavras();
-            caçaPalavras.CaçaPalavras();
+            caçaPalavras.caçaPalavras();
         }
         else if (entrada == 2) {
             JogoDescoberta jogodescoberta = new JogoDescoberta();
-            jogodescoberta.JogoDescoberta();
+            jogodescoberta.jogoDescoberta();
             
         }
-        else{
-            System.out.println("Digite um valor válido");
-            Menu();
-        }
+      
 
 
     }
