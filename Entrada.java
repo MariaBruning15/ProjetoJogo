@@ -3,6 +3,9 @@ import java.util.Scanner;
 public class Entrada{
     private int tentativas = 1;
     private Boolean acertou = false;
+    private String continuar;
+    private int pediuDica;
+
 
     void entrada(String palavraSelecionada, Dica dica, Desistir desistir){
         Scanner scanner = new Scanner(System.in);
@@ -11,14 +14,21 @@ public class Entrada{
         
 
         while (true) { 
-            System.out.println("Informe a palavra \n'dica' para receber uma dica ou '0' para desistir");
+            System.out.println("Informe a palavra");
+            if(pediuDica == 0 ){
+                System.out.println("Digite 'dica' para receber uma dica ou '0' para desistir");
+            }
+            else if(pediuDica != 0){
+                System.out.println("Digite '0' para desistir");
+            }
                     String entrada = scanner.nextLine();
                     if(entrada.equals("0")) {
                         desistir.desistir(tentativas);
-                    break;
+                        break;
                 }
 
                 if(entrada.equals("dica")) {
+                    pediuDica+= 1;
                     dica.dica(palavraSelecionada);
                     continue;
                 }
@@ -26,7 +36,17 @@ public class Entrada{
                 if(entrada.equals(palavraSelecionada)){
                     System.out.println("Você acertou com " + tentativas + " tentativas");
                     acertou = true;
-                    break;
+                    System.out.println("Deseja continuar? \n 'Sim' ou 'Não'?");
+                    continuar = scanner.nextLine();
+                    if(continuar.equals("Sim")){
+                        tentativas = 0;
+                        menu.menu();
+
+                    }
+                    else{
+                        System.out.println("Fim de jogo.");
+                        break;
+                    }
                 }
                     
                 else{
