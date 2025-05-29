@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class CaçaPalavrasMetodos {
+public class CacaPalavrasMetodos {
 
     public static void imprimirTabuleiro(char matrizTabuleiro[][], int tamanho){
         

@@ -1,15 +1,15 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class CaçaPalavras {
+public class CacaPalavras {
     private int tamanho = 10;
     private char tabuleiro[][] = new char[tamanho][tamanho];
 
-    public void caçaPalavras() {
+    public void cacaPalavras() {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
         GerarPalavras palavras = new GerarPalavras();
-        CaçaPalavrasMetodos metodos = new CaçaPalavrasMetodos();
+        CacaPalavrasMetodos metodos = new CacaPalavrasMetodos();
         Entrada entrada = new Entrada();
         Dica dica = new Dica();
         Desistir desistir = new Desistir();

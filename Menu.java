@@ -9,8 +9,8 @@ public class Menu {
         entrada = scanner.nextInt();
 
         if(entrada == 1){
-            CaçaPalavras caçaPalavras = new CaçaPalavras();
-            caçaPalavras.caçaPalavras();
+            CacaPalavras cacaPalavras = new CacaPalavras();
+            cacaPalavras.cacaPalavras();
         }
         else if (entrada == 2) {
             JogoDescoberta jogodescoberta = new JogoDescoberta();
