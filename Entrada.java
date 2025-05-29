@@ -14,24 +14,39 @@ public class Entrada{
         
 
         while (true) { 
-            System.out.println("Informe a palavra");
-            if(pediuDica == 0 ){
-                System.out.println("Digite 'dica' para receber uma dica ou '0' para desistir");
+            if(pediuDica < 2){
+                System.out.println("Informe a palavra:\nDigite 'dica' para receber uma dica ou '0' para desistir");
             }
-            else if(pediuDica != 0){
-                System.out.println("Digite '0' para desistir");
+            else if(pediuDica == 2){
+                System.out.println("Sem mais dicas \nInforme a palavra ou digite '0' para desistir");
             }
-                    String entrada = scanner.nextLine();
+            else if(pediuDica > 2){
+                System.out.println("SEM MAIS DICAS \nInforme a palavra ou digite '0' para desistir");
+            }
+            
+            String entrada = scanner.nextLine();
                     if(entrada.equals("0")) {
                         desistir.desistir(tentativas);
                         break;
                 }
 
                 if(entrada.equals("dica")) {
-                    pediuDica+= 1;
-                    dica.dica(palavraSelecionada);
+                    pediuDica = pediuDica + 1;
+                    if(pediuDica == 1 ){
+                    dica.dica1(palavraSelecionada);
                     continue;
+                    }
+                    else if(pediuDica == 2){
+                    dica.dica2(palavraSelecionada);
+                    continue;
+                    }
+                    else if(pediuDica > 2){
+                    System.err.println("Dicas esgotadas!");
+                    continue;
+                    }
                 }
+                    
+                
 
                 if(entrada.equals(palavraSelecionada)){
                     System.out.println("Você acertou com " + tentativas + " tentativas");
@@ -47,6 +62,8 @@ public class Entrada{
                         System.out.println("Fim de jogo.");
                         break;
                     }
+
+                     
                 }
                     
                 else{
