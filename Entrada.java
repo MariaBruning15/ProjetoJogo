@@ -18,7 +18,7 @@ public class Entrada{
                 System.out.println("Informe a palavra:\nDigite 'dica' para receber uma dica ou '0' para desistir");
             }
             else if(pediuDica == 2){
-                System.out.println("Sem mais dicas \nInforme a palavra ou digite '0' para desistir");
+                System.out.println("Informe a palavra ou digite '0' para desistir");
             }
             else if(pediuDica > 2){
                 System.out.println("SEM MAIS DICAS \nInforme a palavra ou digite '0' para desistir");
